@@ -1,10 +1,10 @@
-import { DataTypes, Model, Optional } from "sequelize";
-import todoSequelize from "../setup/database";
-import { UserAttributes } from "../../interfaces/db-models/UserAttributes";
+import { DataTypes, Model, Optional } from 'sequelize';
+import todoSequelize from '../setup/database';
+import { UserAttributes } from '../../interfaces/db-models/UserAttributes';
 
 // Define the UserCreationAttributes interface
 interface UserCreationAttributes
-  extends Optional<UserAttributes, "id" | "profileImgUrl"> {}
+  extends Optional<UserAttributes, 'id' | 'profileImgUrl'> {}
 
 // Define the UserModel class
 class UserModel
@@ -50,9 +50,9 @@ UserModel.init(
     },
   },
   {
-    tableName: "Users",
+    tableName: 'Users',
     sequelize: todoSequelize,
-  }
+  },
 );
 
 export default UserModel;

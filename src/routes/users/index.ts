@@ -1,10 +1,10 @@
-import { ReasonPhrases, StatusCodes } from "http-status-codes";
-import { Router } from "express";
-import UserModel from "../../database/models/userModel";
+import { ReasonPhrases, StatusCodes } from 'http-status-codes';
+import { Router } from 'express';
+import UserModel from '../../database/models/userModel';
 
 const UserRouter = Router();
 
-UserRouter.get("/currentuser", async (req, res) => {
+UserRouter.get('/currentuser', async (req, res) => {
   const userId = parseInt(req.query.id as string);
 
   const user = await UserModel.findOne({ where: { id: userId } });
